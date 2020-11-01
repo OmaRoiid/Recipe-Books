@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">Recipe Book</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li
+            ><a href="#">Recipes <span class="sr-only">(current)</span>
+            </a></li>
+            <li><a href="#">Shooping List</a></li>
+            <li class="dropdown" > <!-- {1} -->
+                <a class="dropdown-toogle" role="button">  Mange <span class="caret"></span></a>
+                <ul *dropdownMenu class="dropdown-menu"> <!-- {3} -->
+                    <li><a href="#">Save Data</a></li>
+                    <li><a href="#"> Featch Data</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
