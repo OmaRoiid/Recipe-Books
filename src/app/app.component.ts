@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  firstLoadedPart="recipe"
+  onAfterPartSelected(part:string){
+   this.firstLoadedPart=part
+  }
 }

@@ -5,9 +5,9 @@
         </div>
         <ul class="nav navbar-nav">
             <li
-            ><a href="#">Recipes <span class="sr-only">(current)</span>
+            ><a href="#" (click)="onSelect('recipe')" >Recipes <span class="sr-only">(current)</span>
             </a></li>
-            <li><a href="#">Shooping List</a></li>
+            <li><a href="#" (click)="onSelect('shoppingList')">Shooping List</a></li>
             <li class="dropdown" > <!-- {1} -->
                 <a class="dropdown-toogle" role="button">  Mange <span class="caret"></span></a>
                 <ul *dropdownMenu class="dropdown-menu"> <!-- {3} -->
