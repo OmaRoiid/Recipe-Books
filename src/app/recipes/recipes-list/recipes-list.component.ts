@@ -10,7 +10,7 @@ export class RecipesListComponent implements OnInit {
   @Output() selectedRecipe=new EventEmitter<Recipe>()
 mRecipes:Recipe[]=[
   new Recipe("Test","This is  tast","https://cf3.s3.souqcdn.com/item/2020/09/17/13/18/03/41/8/item_L_131803418_a44a48ac5152b.jpg"),
-  new Recipe("Test","This is  tast","https://cf3.s3.souqcdn.com/item/2020/09/17/13/18/03/41/8/item_L_131803418_a44a48ac5152b.jpg")
+  new Recipe("Test2 ","This is  tast","https://cf3.s3.souqcdn.com/item/2020/09/17/13/18/03/41/8/item_L_131803418_a44a48ac5152b.jpg")
 ];
   constructor() { }
 
@@ -18,6 +18,7 @@ mRecipes:Recipe[]=[
   }
   onRecipeSelected(mPassedRecipe:Recipe){
   this.selectedRecipe.emit(mPassedRecipe)
+ 
   }
 
 }
