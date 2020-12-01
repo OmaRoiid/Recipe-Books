@@ -1,11 +1,11 @@
 <div class="row">
     <div class="col-md-5" >
-<app-recipes-list>
+<app-laptops-list>
 
-</app-recipes-list>
+</app-laptops-list>
     </div>
     <div class="col-md-7" >
-        <app-recipes-detail *ngIf="seleceRecipeToShow else infoTxt" [recipe]="seleceRecipeToShow"></app-recipes-detail>
+        <app-laptops-detail *ngIf="seleceLaptopsToShow else infoTxt" [mLaptopDetail]="seleceLaptopsToShow"></app-laptops-detail>
         <ng-template #infoTxt>
          <p>please Select One</p>
         </ng-template>

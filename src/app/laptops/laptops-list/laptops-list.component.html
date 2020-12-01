@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" > New Lap </button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <app-laptop-item  *ngFor=" let lap of mLaps" 
+        [mLaptopItem]="lap"
+        ></app-laptop-item>
+    </div>
+</div>
+
+
+

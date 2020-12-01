@@ -3,8 +3,6 @@ import {
   OnInit,
   ElementRef,
   ViewChild,
-  EventEmitter,
-  Output
 } from '@angular/core';
 
 import { Ingredient } from '../../shared/Ingredient.model';

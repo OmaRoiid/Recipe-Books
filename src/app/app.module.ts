@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import {FormsModule}   from '@angular/forms';
 import { AppComponent } from './app.component';
 import {HeaderComponent} from './header/header.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import {RecipesListComponent} from './recipes/recipes-list/recipes-list.component';
-import{RecipesDetailComponent} from './recipes/recipes-detail/recipes-detail.component'
-import { RecipesItemComponent } from './recipes/recipes-list/recipes-item/recipes-item.component';
+import {laptopsComponent } from './laptops/laptops.component';
+import {laptopsListComponent} from './laptops/laptops-list/laptops-list.component';
+import{laptopsDetailComponent} from './laptops/laptops-detail/laptops-detail.component'
+import { laptopsItemComponent } from './laptops/laptops-list/laptop-item/laptop-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { from } from 'rxjs';
@@ -19,10 +19,10 @@ import { ShoppingService } from './shopping-list/shopping.service';
   declarations: [
     AppComponent,
     HeaderComponent,
-    RecipesComponent,
-    RecipesListComponent,
-    RecipesDetailComponent,
-    RecipesItemComponent,
+    laptopsComponent,
+    laptopsListComponent,
+    laptopsDetailComponent,
+    laptopsItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
     DropDownDirective
