@@ -8,9 +8,11 @@
             ><a href="#" (click)="onSelect('recipe')" >Recipes <span class="sr-only">(current)</span>
             </a></li>
             <li><a href="#" (click)="onSelect('shoppingList')">Shooping List</a></li>
-            <li class="dropdown" > <!-- {1} -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown"appDropDown> <!-- {1} -->
                 <a class="dropdown-toogle" role="button">  Mange <span class="caret"></span></a>
-                <ul *dropdownMenu class="dropdown-menu"> <!-- {3} -->
+                <ul  class="dropdown-menu"> <!-- {3} -->
                     <li><a href="#">Save Data</a></li>
                     <li><a href="#"> Featch Data</a></li>
                 </ul>

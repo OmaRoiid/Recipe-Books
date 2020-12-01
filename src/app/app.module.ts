@@ -10,6 +10,8 @@ import { RecipesItemComponent } from './recipes/recipes-list/recipes-item/recipe
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { from } from 'rxjs';
+import { DropDownDirective } from './shared/dropdown.directive';
+import { ShoppingService } from './shopping-list/shopping.service';
 
 
 
@@ -22,13 +24,14 @@ import { from } from 'rxjs';
     RecipesDetailComponent,
     RecipesItemComponent,
     ShoppingListComponent,
-    ShoppingEditComponent
+    ShoppingEditComponent,
+    DropDownDirective
   ],
   imports: [
     BrowserModule,
     FormsModule 
   ],
-  providers: [],
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
