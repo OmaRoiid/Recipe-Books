@@ -1,11 +1,7 @@
 <app-header (partSelected)="onAfterPartSelected($event)"></app-header>
 <div class="container">
     <div class="row"  >
-        <app-laptops *ngIf="firstLoadedPart === 'recipe'">
-        </app-laptops>
-        <app-shopping-list *ngIf="firstLoadedPart==='shoppingList'">
-            
-        </app-shopping-list>
+        <router-outlet></router-outlet>
     </div>
 
 </div>

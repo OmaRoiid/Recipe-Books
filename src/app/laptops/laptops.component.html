@@ -5,10 +5,7 @@
 </app-laptops-list>
     </div>
     <div class="col-md-7" >
-        <app-laptops-detail *ngIf="seleceLaptopsToShow else infoTxt" [mLaptopDetail]="seleceLaptopsToShow"></app-laptops-detail>
-        <ng-template #infoTxt>
-         <p>please Select One</p>
-        </ng-template>
+    <router-outlet></router-outlet>
 
     </div>
     

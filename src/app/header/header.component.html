@@ -4,17 +4,15 @@
             <a class="navbar-brand">Techs Book</a>
         </div>
         <ul class="nav navbar-nav">
-            <li
-            ><a href="#" (click)="onSelect('recipe')" >Laptops <span class="sr-only">(current)</span>
-            </a></li>
-            <li><a href="#" (click)="onSelect('shoppingList')">Shooping List</a></li>
+            <li routerLinkActive="active"><a routerLink="/laptops"  >Laptops</a></li>
+            <li routerLinkActive="active"><a  routerLink="/shopping-list">Shooping List</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown"appDropDown> <!-- {1} -->
-                <a class="dropdown-toogle" role="button">  Mange <span class="caret"></span></a>
+                <a style="cursor: pointer;" class="dropdown-toogle" role="button">  Mange <span class="caret"></span></a>
                 <ul  class="dropdown-menu"> <!-- {3} -->
-                    <li><a href="#">Save Data</a></li>
-                    <li><a href="#"> Featch Data</a></li>
+                    <li><a>Save Data</a></li>
+                    <li><a> Featch Data</a></li>
                 </ul>
             </li>
         </ul>

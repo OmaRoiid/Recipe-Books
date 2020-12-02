@@ -12,6 +12,9 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { from } from 'rxjs';
 import { DropDownDirective } from './shared/dropdown.directive';
 import { ShoppingService } from './shopping-list/shopping.service';
+import { AppRouting } from './app-route.module';
+import { LaptopsStateComponent } from './laptops/laptops-state/laptops-state.component';
+import { LaptopEditComponent } from './laptops/laptop-edit/laptop-edit.component';
 
 
 
@@ -25,11 +28,14 @@ import { ShoppingService } from './shopping-list/shopping.service';
     laptopsItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropDownDirective
+    DropDownDirective,
+    LaptopsStateComponent,
+    LaptopEditComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule 
+    FormsModule,
+    AppRouting
   ],
   providers: [ShoppingService],
   bootstrap: [AppComponent]

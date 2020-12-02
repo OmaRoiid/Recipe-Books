@@ -1,5 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Ingredient } from '../shared/Ingredient.model';
+import { ShoppingService } from '../shopping-list/shopping.service';
 import { Laptops } from './laptop.model';
 
 @Injectable({
@@ -7,22 +8,33 @@ import { Laptops } from './laptop.model';
 })
 export class LaptopService {
   selectedItem=new EventEmitter<Laptops>()
-private mRecipes:Laptops[]=[
-  new Laptops("Big Mac",
+private mLaptops:Laptops[]=[
+  new Laptops(0,
+    "Big Mac",
   "Super Teasty Burger",
   "https://cf5.s3.souqcdn.com/item/2020/09/30/13/18/58/91/8/item_XL_131858918_9e887409ab129.jpg",[
     new Ingredient("Meat",2),
      new Ingredient("Fries",10),
   ] ),
-   new Laptops("Big Mac",
+   new Laptops(
+     1,
+     "Big Mac",
   "Super Teasty Burger",
   "https://cf5.s3.souqcdn.com/item/2020/09/30/13/18/58/91/8/item_XL_131858918_9e887409ab129.jpg",[
     new Ingredient("Meat",2),
      new Ingredient("Fries",10),
   ] )
 ];
-  constructor() { }
+  constructor(private slService:ShoppingService) { }
   getLaptops(){
-    return this.mRecipes.slice();
+    return this.mLaptops.slice();
   }
+    getLaptopById(id:number){
+    return this.mLaptops[id];
+  }
+  addItemToShoppingList(ingreadnt:Ingredient[]){
+this.slService.AddIngredients(ingreadnt)
+
+  }
+
 }

@@ -16,16 +16,16 @@
                 Manage <span class="caret"> </span> 
             </button>
             <ul class="dropdown-menu">
-               <li><a href="">To Shopping List </a></li>
-               <li><a href="">Edit Recipe </a></li>
-               <li><a href="">Delete Recipe</a></li>
+               <li><a (click)="AddToShoppingList()" style="cursor: pointer;" >To Shopping List </a></li>
+               <li><a (click)="onEditItem()" routerLinkActive="router-link-active"  >Edit Laptop </a></li>
+               <li><a  >Delete Laptop</a></li>
             </ul>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col-12">
-        {{mLaptopDetail.mLapDesc}}
+        {{mLaptopDetail.mLapDesc}} 
     </div>
 </div>
 <div class="row">
