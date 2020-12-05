@@ -1,4 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Ingredient } from '../shared/Ingredient.model';
 import { ShoppingService } from '../shopping-list/shopping.service';
 import { Laptops } from './laptop.model';
@@ -7,7 +8,6 @@ import { Laptops } from './laptop.model';
   providedIn: 'root'
 })
 export class LaptopService {
-  selectedItem=new EventEmitter<Laptops>()
 private mLaptops:Laptops[]=[
   new Laptops(0,
     "Big Mac",

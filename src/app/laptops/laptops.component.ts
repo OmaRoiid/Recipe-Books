@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Laptops } from './laptop.model';
+import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { interval, Subscription } from 'rxjs';
 import { LaptopService } from './laptop.service';
 
 @Component({
@@ -8,22 +8,11 @@ import { LaptopService } from './laptop.service';
   styleUrls: ['./laptops.component.css'],
   providers:[LaptopService]
 })
-export class laptopsComponent implements OnInit {
- seleceLaptopsToShow:Laptops
-  constructor(private mLapTopService:LaptopService) {
-  
+export class laptopsComponent implements OnInit{
+  constructor() {
 }
 
-  ngOnInit(): void {
-    this.mLapTopService.selectedItem.subscribe(
-      (mRecipe:Laptops)=>{
-        this.seleceLaptopsToShow=mRecipe
-      }
-    )
-  }
-  selectRecipe(rec:Laptops)
-  {
-    this.seleceLaptopsToShow=rec
+  ngOnInit(){
   }
 
 }
