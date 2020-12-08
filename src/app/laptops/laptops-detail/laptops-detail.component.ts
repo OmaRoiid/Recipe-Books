@@ -28,10 +28,14 @@ onclick(obj){
 console.log(obj)
 }
 AddToShoppingList(){
-this.laptopService.addItemToShoppingList(this.mLaptopDetail.ingread)
+this.laptopService.addItemToShoppingList(this.mLaptopDetail.ingredients)
 }
   onEditItem(){
     this.router.navigate(['edit'],{relativeTo:this.route})
+  }
+  onDeleteItem(){
+    this.laptopService.deleteLapTop(this.id)
+    this,this.router.navigate(["/laptops"])
   }
 
 }

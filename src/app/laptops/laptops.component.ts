@@ -6,7 +6,6 @@ import { LaptopService } from './laptop.service';
   selector: 'app-laptops',
   templateUrl: './laptops.component.html',
   styleUrls: ['./laptops.component.css'],
-  providers:[LaptopService]
 })
 export class laptopsComponent implements OnInit{
   constructor() {

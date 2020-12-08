@@ -21,5 +21,6 @@ imports:[RouterModule.forRoot(appRoute)],
 exports:[RouterModule]
 })
 export class AppRouting{
+    
 
 }

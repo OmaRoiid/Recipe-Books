@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule}   from '@angular/forms';
+import {FormsModule, ReactiveFormsModule}   from '@angular/forms';
 import { AppComponent } from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {laptopsComponent } from './laptops/laptops.component';
@@ -15,6 +15,7 @@ import { ShoppingService } from './shopping-list/shopping.service';
 import { AppRouting } from './app-route.module';
 import { LaptopsStateComponent } from './laptops/laptops-state/laptops-state.component';
 import { LaptopEditComponent } from './laptops/laptop-edit/laptop-edit.component';
+import { LaptopService } from './laptops/laptop.service';
 
 
 
@@ -35,9 +36,10 @@ import { LaptopEditComponent } from './laptops/laptop-edit/laptop-edit.component
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRouting
   ],
-  providers: [ShoppingService],
+  providers: [ShoppingService,LaptopService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
