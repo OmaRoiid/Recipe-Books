@@ -34,3 +34,4 @@ this.mLaps=this.mLapTopService.getLaptops();
   ngOnDestroy(): void {
   this.subscription.unsubscribe()
 }
+}

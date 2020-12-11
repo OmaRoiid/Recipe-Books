@@ -8,28 +8,15 @@ import { Laptops } from './laptop.model';
   providedIn: 'root'
 })
 export class LaptopService {
-  laptopchanged=new Subject<Laptops[]>()
-private mLaptops:Laptops[]=[
-  new Laptops(
-   0,
-    "Big Mac",
-      "https://cf5.s3.souqcdn.com/item/2020/09/30/13/18/58/91/8/item_XL_131858918_9e887409ab129.jpg",
-  "Super Teasty Burger",
-[
-    new Ingredient("Meat",2),
-     new Ingredient("Fries",10),
-  ] ),
-   new Laptops(
-        1,
-     "Big Mac",
-      "https://cf5.s3.souqcdn.com/item/2020/09/30/13/18/58/91/8/item_XL_131858918_9e887409ab129.jpg",
-  "Super Teasty Burger",
- [
-    new Ingredient("Meat",2),
-     new Ingredient("Fries",10),
-  ] )
-];
+  laptopchanged=new Subject<Laptops[]>() //helps you to subscribe from out side  the  class and get updated wthis  the  new  data 
+private mLaptops:Laptops[];
   constructor(private slService:ShoppingService) { }
+
+  //add new laptops from the server 
+  setlapTops(newLaptops:Laptops[]){
+  this.mLaptops=newLaptops
+  this.laptopchanged.next(this.mLaptops.slice())
+  }
   getLaptops(){
     return this.mLaptops.slice();
   }

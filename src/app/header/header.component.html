@@ -11,8 +11,8 @@
             <li class="dropdown"appDropDown> <!-- {1} -->
                 <a style="cursor: pointer;" class="dropdown-toogle" role="button">  Mange <span class="caret"></span></a>
                 <ul  class="dropdown-menu"> <!-- {3} -->
-                    <li><a>Save Data</a></li>
-                    <li><a> Featch Data</a></li>
+                    <li><a style="cursor: pointer;" (click)="SaveDataIntoFireBase()">Save Data</a></li>
+                    <li><a style="cursor: pointer;" (click)="onFetchLAptops()">  Fetch Data</a></li>
                 </ul>
             </li>
         </ul>

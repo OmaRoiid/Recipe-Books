@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule}   from '@angular/forms';
+import{ HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {laptopsComponent } from './laptops/laptops.component';
@@ -37,6 +38,7 @@ import { LaptopService } from './laptops/laptop.service';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AppRouting
   ],
   providers: [ShoppingService,LaptopService],
