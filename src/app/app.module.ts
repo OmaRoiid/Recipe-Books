@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule}   from '@angular/forms';
-import{ HttpClientModule} from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import {HeaderComponent} from './header/header.component';
-import {laptopsComponent } from './laptops/laptops.component';
-import {laptopsListComponent} from './laptops/laptops-list/laptops-list.component';
-import{laptopsDetailComponent} from './laptops/laptops-detail/laptops-detail.component'
+import { HeaderComponent } from './header/header.component';
+import { laptopsComponent } from './laptops/laptops.component';
+import { laptopsListComponent } from './laptops/laptops-list/laptops-list.component';
+import { laptopsDetailComponent } from './laptops/laptops-detail/laptops-detail.component';
 import { laptopsItemComponent } from './laptops/laptops-list/laptop-item/laptop-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
@@ -17,8 +17,7 @@ import { AppRouting } from './app-route.module';
 import { LaptopsStateComponent } from './laptops/laptops-state/laptops-state.component';
 import { LaptopEditComponent } from './laptops/laptop-edit/laptop-edit.component';
 import { LaptopService } from './laptops/laptop.service';
-
-
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -32,16 +31,17 @@ import { LaptopService } from './laptops/laptop.service';
     ShoppingEditComponent,
     DropDownDirective,
     LaptopsStateComponent,
-    LaptopEditComponent
+    LaptopEditComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRouting
+    AppRouting,
   ],
-  providers: [ShoppingService,LaptopService],
-  bootstrap: [AppComponent]
+  providers: [ShoppingService, LaptopService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
