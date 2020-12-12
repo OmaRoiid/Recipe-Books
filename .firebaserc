@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "techbooks-838de": {
+      "hosting": {
+        "my-first-app": [
+          "techbooks-838de"
+        ]
+      }
+    }
+  }
+}
