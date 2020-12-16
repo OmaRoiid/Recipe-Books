@@ -1,21 +1,42 @@
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand">Techs Book</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li routerLinkActive="active"><a routerLink="/laptops"  >Laptops</a></li>
-            <li routerLinkActive="active"><a  routerLink="/shopping-list">Shopping List</a></li>
-             <li routerLinkActive="active"><a  routerLink="/auth">Authenticate</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown"appDropDown> <!-- {1} -->
-                <a style="cursor: pointer;" class="dropdown-toogle" role="button">  Mange <span class="caret"></span></a>
-                <ul  class="dropdown-menu"> <!-- {3} -->
-                    <li><a style="cursor: pointer;" (click)="SaveDataIntoFireBase()">Save Data</a></li>
-                    <li><a style="cursor: pointer;" (click)="onFetchLAptops()">  Fetch Data</a></li>
-                </ul>
-            </li>
-        </ul>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Techs Book</a>
     </div>
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active" *ngIf="isAuthflag">
+        <a routerLink="/laptops">Laptops</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/shopping-list">Shopping List</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/auth">Authenticate</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown" appDropDown *ngIf="isAuthflag">
+        <!-- {1} -->
+        <a style="cursor: pointer" class="dropdown-toogle" role="button">
+          Mange <span class="caret"></span
+        ></a>
+        <ul class="dropdown-menu">
+          <!-- {3} -->
+          <li>
+            <a style="cursor: pointer" (click)="SaveDataIntoFireBase()"
+              >Save Data</a
+            >
+          </li>
+          <li>
+            <a style="cursor: pointer" (click)="onFetchLAptops()">
+              Fetch Data</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a style="cursor: pointer" (click)="onLogOut()" *ngIf="isAuthflag">Logout</a>
+      </li>
+    </ul>
+  </div>
 </nav>

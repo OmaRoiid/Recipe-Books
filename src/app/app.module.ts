@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';  
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { laptopsComponent } from './laptops/laptops.component';
@@ -20,6 +21,7 @@ import { LaptopService } from './laptops/laptop.service';
 import { AuthComponent } from './auth/auth.component';
 import { AngularFireModule } from '@angular/fire';
 import { SpinnerLoading } from './shared/loading-spinner/loading-spinner.component';
+import { AuthInterceptorService } from './auth/auth-interceptor.service';
 // For Firebase JavaScript SDK v7.20.0 and later,
 var firebaseConfig = {
   apiKey: 'AIzaSyABZUFItXNmc_ZMbsKMwQwgXNubL7zUm_o',
@@ -49,13 +51,14 @@ var firebaseConfig = {
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AppRouting,
   ],
-  providers: [ShoppingService, LaptopService],
+  providers: [ShoppingService, LaptopService,{provide:HTTP_INTERCEPTORS,useClass:AuthInterceptorService,multi:true}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
